@@ -280,7 +280,6 @@ class ActionBar extends React.Component {
 
   render() {
     const { selectedJob, lvUrl, lvFullUrl, jobLogUrls, user, pinJob } = this.props;
-    console.log("actionbar selected", selectedJob);
 
     return (
       <div id="job-details-actionbar">
