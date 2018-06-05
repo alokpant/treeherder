@@ -816,7 +816,7 @@ class JobNote(models.Model):
 
         for bug_number in add_bugs:
             classification, _ = ClassifiedFailure.objects.get_or_create(bug_number=bug_number)
-            classification, _ = text_log_error.set_classification("ManualDetector", classification)
+            text_log_error.set_classification("ManualDetector", classification)
 
         if len(add_bugs) == 1 and not existing_bugs:
             text_log_error.mark_best_classification_verified(classification)
@@ -1195,14 +1195,12 @@ class TextLogError(models.Model):
 
     @transaction.atomic
     def set_classification(self, matcher_name, classification):
-        match = TextLogErrorMatch.objects.create(
+        TextLogErrorMatch.objects.create(
             text_log_error=self,
             classified_failure=classification,
             matcher_name=matcher_name,
             score=1,
         )
-
-        return classification, match
 
     def mark_best_classification(self, classification):
         """
