@@ -7,7 +7,7 @@ import { getSlaveHealthUrl, getJobsUrl } from '../../../helpers/url';
 import JobModel from '../../../models/job';
 import TextLogStepModel from '../../../models/textLogStep';
 
-class SimilarJobsTab extends React.Component {
+export default class SimilarJobsTab extends React.Component {
   constructor(props) {
     super(props);
 
@@ -281,5 +281,3 @@ SimilarJobsTab.propTypes = {
   $injector: PropTypes.object.isRequired,
   repoName: PropTypes.string.isRequired,
 };
-
-export default SimilarJobsTab;

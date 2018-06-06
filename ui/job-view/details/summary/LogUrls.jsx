@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import logviewerIcon from '../../../img/logviewerIcon.svg';
 
 function getLogUrlProps(logUrl, lvUrl, lvFullUrl) {
-
   switch (logUrl.parse_status) {
     case 'parsed':
       return {

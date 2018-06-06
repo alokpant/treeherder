@@ -406,9 +406,7 @@ class DetailsPanel extends React.Component {
     } = this.state;
 
     return (
-      <div
-        className={job ? 'details-panel-slide' : 'hidden'}
-      >
+      <div className={job ? 'details-panel-slide' : 'hidden'}>
         <div
           id="details-panel-resizer"
           resizer="horizontal"

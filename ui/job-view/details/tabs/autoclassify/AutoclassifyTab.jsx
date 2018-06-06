@@ -9,7 +9,7 @@ import TextLogErrorsModel from '../../../../models/textLogErrors';
 import { getLogViewerUrl, getApiUrl, getProjectJobUrl } from "../../../../helpers/url";
 import { thEvents } from "../../../../js/constants";
 
-class AutoclassifyTab extends React.Component {
+export default class AutoclassifyTab extends React.Component {
   static getDerivedStateFromProps(nextProps) {
     const { user } = nextProps;
 
@@ -542,5 +542,3 @@ AutoclassifyTab.defaultProps = {
   logsParsed: false,
   logParseStatus: 'pending',
 };
-
-export default AutoclassifyTab;

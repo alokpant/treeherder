@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import { linkifyRevisions, getBugUrl } from '../../../helpers/url';
 
-function ClassificationsPanel(props) {
+export default function ClassificationsPanel(props) {
   const {
     $injector, repoName, classification, job, bugs,
   } = props;
@@ -54,5 +54,3 @@ ClassificationsPanel.propTypes = {
   job: PropTypes.object.isRequired,
   bugs: PropTypes.array.isRequired,
 };
-
-export default ClassificationsPanel;

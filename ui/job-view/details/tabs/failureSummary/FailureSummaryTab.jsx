@@ -10,7 +10,7 @@ import { thEvents } from '../../../../js/constants';
 import { getBugUrl } from '../../../../helpers/url';
 
 
-class FailureSummaryTab extends React.Component {
+export default class FailureSummaryTab extends React.Component {
   constructor(props) {
     super(props);
 
@@ -148,5 +148,3 @@ FailureSummaryTab.defaultProps = {
   logParseStatus: 'pending',
   lvFullUrl: null,
 };
-
-export default FailureSummaryTab;

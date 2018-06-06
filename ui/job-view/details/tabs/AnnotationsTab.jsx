@@ -137,7 +137,7 @@ AnnotationsTable.propTypes = {
   dateFilter: PropTypes.func.isRequired,
 };
 
-class AnnotationsTab extends React.Component {
+export default class AnnotationsTab extends React.Component {
   constructor(props) {
     super(props);
 
@@ -254,5 +254,3 @@ AnnotationsTab.propTypes = {
 AnnotationsTab.defaultProps = {
   selectedJob: null,
 };
-
-export default AnnotationsTab;

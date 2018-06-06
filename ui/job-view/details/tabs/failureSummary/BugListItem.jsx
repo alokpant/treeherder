@@ -6,7 +6,7 @@ import { getBugUrl } from '../../../../helpers/url';
 import { getSearchWords } from '../../../../helpers/display';
 
 
-function BugListItem(props) {
+export default function BugListItem(props) {
   const {
     bug, suggestion, bugClassName, title, selectedJob, addBug,
   } = props;
@@ -53,5 +53,3 @@ BugListItem.defaultProps = {
   bugClassName: '',
   title: null,
 };
-
-export default BugListItem;

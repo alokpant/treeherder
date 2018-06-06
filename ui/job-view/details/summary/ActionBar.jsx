@@ -14,7 +14,7 @@ import JobDetailModel from '../../../models/jobDetail';
 import JobModel from '../../../models/job';
 import { formatModelError, formatTaskclusterError } from "../../../helpers/errorMessage";
 
-class ActionBar extends React.Component {
+export default class ActionBar extends React.Component {
   constructor(props) {
     super(props);
 
@@ -237,9 +237,9 @@ class ActionBar extends React.Component {
     // get buildbot ids of any buildbot jobs we want to cancel
     // first
     JobDetailModel.getJobDetails({
-                                          job_id__in: jobIdsToCancel,
-                                          title: 'buildbot_request_id'
-                                        }).then(buildbotRequestIdDetails => (
+      job_id__in: jobIdsToCancel,
+      title: 'buildbot_request_id'
+    }).then(buildbotRequestIdDetails => (
       JobModel.cancel(repoName, jobIdsToCancel).then(
         () => {
           buildbotRequestIdDetails.forEach(
@@ -403,5 +403,3 @@ ActionBar.defaultProps = {
   lvFullUrl: null,
   jobLogUrls: [],
 };
-
-export default ActionBar;

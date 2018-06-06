@@ -13,7 +13,7 @@ import intermittentTemplate from '../../../../partials/main/intermittent.html';
 /**
  * Editable option
  */
-class LineOption extends React.Component {
+export default class LineOption extends React.Component {
   constructor(props) {
     super(props);
     const { $injector } = props;
@@ -210,5 +210,3 @@ LineOption.defaultProps = {
   onIgnoreAlwaysChange: null,
   manualBugNumber: undefined,
 };
-
-export default LineOption;
